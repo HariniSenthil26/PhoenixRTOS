@@ -23,10 +23,33 @@ uint32_t List_Size(const List *list)
 
 bool List_InsertFront(List *list, ListNode *node)
 {
-    (void)list;
-    (void)node;
+    if ((list == NULL) || (node == NULL))
+    {
+        return false;
+    }
 
-    return false;
+    node->prev = NULL;
+
+    if (List_IsEmpty(list))
+    {
+        node->next = NULL;
+
+        list->head = node;
+
+        list->tail = node;
+    }
+    else
+    {
+        node->next = list->head;
+
+        list->head->prev = node;
+
+        list->head = node;
+    }
+
+    list->size++;
+
+    return true;
 }
 
 bool List_InsertBack(List *list, ListNode *node)
