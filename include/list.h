@@ -1,11 +1,21 @@
+/*
+ * ============================================================================
+ * PhoenixRTOS
+ * Generic Doubly Linked List
+ * ============================================================================
+ */
+
 #ifndef LIST_H
 #define LIST_H
 
 #include <stdint.h>
 #include <stdbool.h>
 
-/*
- * Generic Doubly Linked List Node
+/**
+ * @brief Generic list node.
+ *
+ * Every kernel object (TCB, Queue, Timer, Semaphore)
+ * will embed or reference a ListNode.
  */
 typedef struct ListNode
 {
@@ -17,8 +27,8 @@ typedef struct ListNode
 
 } ListNode;
 
-/*
- * Generic Doubly Linked List
+/**
+ * @brief Doubly linked list descriptor.
  */
 typedef struct
 {
