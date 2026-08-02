@@ -2,6 +2,11 @@
 
 void List_Init(List *list)
 {
+    if (list == NULL)
+    {
+        return;
+    }
+
     list->head = NULL;
     list->tail = NULL;
     list->size = 0U;
@@ -14,6 +19,11 @@ bool List_IsEmpty(const List *list)
 
 uint32_t List_Size(const List *list)
 {
+    if (list == NULL)
+    {
+        return 0U;
+    }
+
     return list->size;
 }
 

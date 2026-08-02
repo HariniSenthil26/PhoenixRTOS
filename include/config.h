@@ -1,14 +1,12 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-/*
- * PhoenixRTOS Configuration
- */
+#include <stdint.h>
 
-#define PHOENIX_MAX_TASKS        (16U)
-
-#define PHOENIX_TICK_RATE_HZ     (1000U)
-
-#define PHOENIX_STACK_SIZE       (512U)
+#define MAX_TASKS             (10U)
+#define DEFAULT_STACK_SIZE    (256U)
+#define TASK_NAME_LENGTH      (32U)
+#define IDLE_TASK_PRIORITY    (255U)
+#define KERNEL_TICK_RATE_HZ   (1000U)
 
 #endif
