@@ -45,6 +45,11 @@ The objective of this project is to understand RTOS kernel internals by designin
 - Idle Task
 - Diagnostics
 - Unit Testing
+- ## Current Development Focus
+
+- Generic Doubly Linked List
+- Task Control Block (TCB)
+- Scheduler Infrastructure
 
 ---
 
